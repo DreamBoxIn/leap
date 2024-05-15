@@ -29,7 +29,7 @@ function SidebarHorizon(props: { variant?: string; [x: string]: any }) {
         variant === 'auth' ? 'xl:hidden' : 'xl:block'
       } ${open ? '' : '-translate-x-[105%] xl:translate-x-[unset]'}`}
       onMouseEnter={() => setHovered(true)}
-      onMouseLeave={() => setHovered(false)}
+      onMouseLeave={() =>   ed(false)}
     >
       <Card
         extra={`mr-3 w-full h-[96.5vh] sm:ml-4 sm:my-4 m-7 !rounded-[20px]`}

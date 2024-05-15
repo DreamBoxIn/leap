@@ -23,7 +23,13 @@ function SidebarHorizon(props: { routes: IRoute[]; [x: string]: any }) {
 
       <div className={`mx-[56px] mt-[50px] flex items-center`}>
         <div className="ml-1 mt-1 h-2.5 font-poppins text-[26px] font-bold uppercase text-navy-700 dark:text-white">
-          Horizon <span className="font-medium">FREE</span>
+          Tokens <span className="font-medium">Touch</span>
+        </div>
+      </div>
+      <div className="mt-[-30px] h-px bg-gray-3100 dark:bg-white/30" />
+      <div className={`mx-[56px] mt-[50px] flex items-center`}>
+        <div className="ml-1 mt-1 h-2.5 font-poppins text-[26px] font-medium uppercase text-navy-700 dark:text-white">
+          Quantum <span className="font-bold">LEAP</span>
         </div>
       </div>
       <div className="mb-7 mt-[58px] h-px bg-gray-300 dark:bg-white/30" />

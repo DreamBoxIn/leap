@@ -1,4 +1,7 @@
 import React from 'react';
+import { BsPeople } from 'react-icons/bs';
+import { HiHand } from 'react-icons/hi';
+import { IoOptions } from 'react-icons/io5';
 
 // Admin Imports
 
@@ -9,33 +12,37 @@ import {
   MdBarChart,
   MdPerson,
   MdLock,
+  MdHealthAndSafety,
+  MdHealing,
+  MdLiveHelp,
+  MdYard,
 } from 'react-icons/md';
 
 const routes = [
   {
-    name: 'Main Dashboard',
+    name: 'Mi energía',
     layout: '/admin',
-    path: 'default',
-    icon: <MdHome className="h-6 w-6" />,
+    path: 'energia',
+    icon: <MdYard className="h-6 w-6" />,
   },
   {
-    name: 'NFT Marketplace',
+    name: 'Sanación',
     layout: '/admin',
-    path: 'nft-marketplace',
-    icon: <MdOutlineShoppingCart className="h-6 w-6" />,
+    path: 'sanacion',
+    icon: <HiHand className="h-6 w-6" />,
 
     secondary: true,
   },
   {
-    name: 'Data Tables',
+    name: 'Mi progreso',
     layout: '/admin',
     icon: <MdBarChart className="h-6 w-6" />,
-    path: 'data-tables',
+    path: 'progreso',
   },
   {
-    name: 'Profile',
+    name: 'Perfil',
     layout: '/admin',
-    path: 'profile',
+    path: 'perfil',
     icon: <MdPerson className="h-6 w-6" />,
   },
   {

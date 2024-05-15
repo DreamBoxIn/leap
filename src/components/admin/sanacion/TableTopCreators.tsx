@@ -1,8 +1,6 @@
 import React from 'react';
-import CardMenu from 'components/card/CardMenu';
-import Card from 'components/card';
 import Progress from 'components/progress';
-import { MdCancel, MdCheckCircle, MdOutlineError } from 'react-icons/md';
+import Card from 'components/card';
 
 import {
   createColumnHelper,
@@ -12,18 +10,14 @@ import {
   SortingState,
   useReactTable,
 } from '@tanstack/react-table';
-
 type RowObj = {
-  name: string;
-  status: string;
-  date: string;
-  progress: number;
+  name: string[];
+  artworks: number;
+  rating: number;
 };
+import Image from 'next/image';
 
-const columnHelper = createColumnHelper<RowObj>();
-
-// const columns = columnsDataCheck;
-export default function ComplexTable(props: { tableData: any }) {
+function CheckTable(props: { tableData: any }) {
   const { tableData } = props;
   const [sorting, setSorting] = React.useState<SortingState>([]);
   let defaultData = tableData;
@@ -31,58 +25,36 @@ export default function ComplexTable(props: { tableData: any }) {
     columnHelper.accessor('name', {
       id: 'name',
       header: () => (
-        <p className="text-sm font-bold text-gray-600 dark:text-white">NAME</p>
+        <p className="text-sm font-bold text-gray-600 dark:text-white">NOMBRE</p>
       ),
-      cell: (info) => (
-        <p className="text-sm font-bold text-navy-700 dark:text-white">
-          {info.getValue()}
-        </p>
-      ),
-    }),
-    columnHelper.accessor('status', {
-      id: 'status',
-      header: () => (
-        <p className="text-sm font-bold text-gray-600 dark:text-white">
-          STATUS
-        </p>
-      ),
-      cell: (info) => (
-        <div className="flex items-center">
-          {info.getValue() === 'Approved' ? (
-            <MdCheckCircle className="me-1 text-green-500 dark:text-green-300" />
-          ) : info.getValue() === 'Disable' ? (
-            <MdCancel className="me-1 text-red-500 dark:text-red-300" />
-          ) : info.getValue() === 'Error' ? (
-            <MdOutlineError className="me-1 text-amber-500 dark:text-amber-300" />
-          ) : null}
-          <p className="text-sm font-bold text-navy-700 dark:text-white">
-            {info.getValue()}
+      cell: (info: any) => (
+        <div className="flex items-center gap-2">
+          <div className="h-[30px] w-[30px] rounded-full">
+            <Image
+              width="2"
+              height="20"
+              src={info.getValue()[1]}
+              className="h-full w-full rounded-full"
+              alt=""
+            />
+          </div>
+          <p className="text-sm font-medium text-navy-700 dark:text-white">
+            {info.getValue()[0]}
           </p>
         </div>
       ),
     }),
-    columnHelper.accessor('date', {
-      id: 'date',
-      header: () => (
-        <p className="text-sm font-bold text-gray-600 dark:text-white">DATE</p>
-      ),
-      cell: (info) => (
-        <p className="text-sm font-bold text-navy-700 dark:text-white">
-          {info.getValue()}
-        </p>
-      ),
-    }),
-    columnHelper.accessor('progress', {
-      id: 'progress',
+    columnHelper.accessor('artworks', {
+      id: 'artworks',
       header: () => (
         <p className="text-sm font-bold text-gray-600 dark:text-white">
-          PROGRESS
+          PARTICIPACIÓN
         </p>
       ),
       cell: (info) => (
-        <div className="flex items-center">
-          <Progress width="w-[108px]" value={info.getValue()} />
-        </div>
+        <p className="text-md font-medium text-gray-600 dark:text-white">
+          {info.getValue()}
+        </p>
       ),
     }),
   ]; // eslint-disable-next-line
@@ -99,13 +71,16 @@ export default function ComplexTable(props: { tableData: any }) {
     debugTable: true,
   });
   return (
-    <Card extra={'w-full h-full px-6 pb-6 sm:overflow-x-auto'}>
-      <div className="relative flex items-center justify-between pt-4">
+    <Card extra={'w-full sm:overflow-auto px-6'}>
+      <header className="relative flex items-center justify-between pt-4">
         <div className="text-xl font-bold text-navy-700 dark:text-white">
-          Complex Table
+          Comunidad
         </div>
-        <CardMenu />
-      </div>
+
+        <button className="dark:active-bg-white-20 linear rounded-[20px] bg-lightPrimary px-4 py-2 text-base font-medium text-brand-500 transition duration-200 hover:bg-gray-100 active:bg-gray-200 dark:bg-white/5 dark:text-white dark:hover:bg-white/10">
+          See all
+        </button>
+      </header>
 
       <div className="mt-8 overflow-x-scroll xl:overflow-x-hidden">
         <table className="w-full">
@@ -118,7 +93,7 @@ export default function ComplexTable(props: { tableData: any }) {
                       key={header.id}
                       colSpan={header.colSpan}
                       onClick={header.column.getToggleSortingHandler()}
-                      className="cursor-pointer border-b border-gray-200 pb-2 pr-4 pt-4 text-start dark:border-white/30"
+                      className="cursor-pointer border-b border-gray-200 pb-2 pr-4 pt-4 text-start"
                     >
                       <div className="items-center justify-between text-xs text-gray-200">
                         {flexRender(
@@ -165,3 +140,6 @@ export default function ComplexTable(props: { tableData: any }) {
     </Card>
   );
 }
+
+export default CheckTable;
+const columnHelper = createColumnHelper<RowObj>();

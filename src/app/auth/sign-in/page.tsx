@@ -72,7 +72,7 @@ function SignInDefault() {
                 Not registered yet?
               </span>
               <a
-                href="/auth/sign-up/default"
+                href="/auth/sign-up/energia"
                 className="ml-1 text-sm font-medium text-brand-500 hover:text-brand-600 dark:text-white"
               >
                 Create an account

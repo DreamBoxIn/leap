@@ -1,10 +1,10 @@
 'use client';
-import Banner from 'components/admin/profile/Banner';
-import General from 'components/admin/profile/General';
-import Notification from 'components/admin/profile/Notification';
-import Project from 'components/admin/profile/Project';
-import Storage from 'components/admin/profile/Storage';
-import Upload from 'components/admin/profile/Upload';
+import Banner from 'components/admin/perfil/Banner';
+import General from 'components/admin/perfil/General';
+import Notification from 'components/admin/perfil/Notification';
+import Project from 'components/admin/perfil/Project';
+import Storage from 'components/admin/perfil/Storage';
+import Upload from 'components/admin/perfil/Upload';
 
 const ProfileOverview = () => {
   return (

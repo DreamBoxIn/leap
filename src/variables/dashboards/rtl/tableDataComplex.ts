@@ -7,10 +7,10 @@ type RowObj = {
 
 const tableDataComplex: RowObj[] = [
   {
-    name: 'Horizon UI PRO',
+    name: 'Donar sesion',
     progress: 75.5,
     status: 'Approved',
-    date: '12 Jan 2021',
+    date: '15 Jan 2021',
   },
   {
     name: 'Horizon UI Free',
