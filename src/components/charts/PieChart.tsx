@@ -9,8 +9,7 @@ const LineChart = (props) => {
   const { chartData, chartOptions } = props;
 
   return (
-    // @ts-expect-error
-    <Chart
+     <Chart
       options={chartOptions}
       type="line"
       width="100%"
