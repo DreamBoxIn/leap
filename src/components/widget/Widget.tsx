@@ -29,22 +29,12 @@ const Widget = (props) => {
         </div>
       </div>
 
-      <div className="h-50 ml-4 flex w-auto flex-col justify-center">
-        <div className="flex items-center justify-between">
+      <div className="h-50 ml-4 flex flex-1 flex-col justify-center relative">
+        <div className="flex items-center mb-2">
           <p className="font-dm text-sm font-medium text-gray-600">{title}</p>
-          {showSendReceive && (
-            <div className="flex items-center space-x-2">
-              <button className="p-1 text-gray-300 hover:bg-gray-700 rounded-full">
-                <MdSend size={20} />
-              </button>
-              <button className="p-1 text-gray-300 hover:bg-gray-700 rounded-full">
-                <MdCallReceived size={20} />
-              </button>
-            </div>
-          )}
           <div className="relative flex-shrink-0 ml-4">
             <span className="cursor-help" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-              <AiOutlineInfoCircle size={16}/>
+              <AiOutlineInfoCircle size={16} />
               {showTooltip && (
                 <div className="absolute -left-40 -top-10 p-2 bg-black opacity-75 text-xs shadow-lg rounded-md text-gray-100 z-10">
                   {tooltipText}
@@ -57,6 +47,17 @@ const Widget = (props) => {
           {subtitle}
         </h4>
       </div>
+      
+      {showSendReceive && (
+        <div className="flex items-center space-x-2 absolute right-5 top-14 transform -translate-y-1/2">
+          <button className="p-1 text-gray-300 hover:bg-gray-700 rounded-full">
+            <MdSend size={24} />
+          </button>
+          <button className="p-1 text-gray-300 hover:bg-gray-700 rounded-full">
+            <MdCallReceived size={24} />
+          </button>
+        </div>
+      )}
     </Card>
   );
 };

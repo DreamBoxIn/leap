@@ -1,5 +1,6 @@
+import Home from 'app/page';
 import React from 'react';
-import { BsPeople } from 'react-icons/bs';
+import { BsCash, BsPeople } from 'react-icons/bs';
 import { HiHand } from 'react-icons/hi';
 import { IoOptions } from 'react-icons/io5';
 
@@ -16,28 +17,29 @@ import {
   MdHealing,
   MdLiveHelp,
   MdYard,
+  MdToken,
 } from 'react-icons/md';
 
 const routes = [
   {
-    name: 'Mi energía',
+    name: 'Inicio PXO',
     layout: '/admin',
-    path: 'energia',
-    icon: <MdYard className="h-6 w-6" />,
+    path: 'inicio',
+    icon: <MdHome className="h-6 w-6" />,
   },
   {
-    name: 'Sanación',
+    name: 'Invertir',
     layout: '/admin',
-    path: 'sanacion',
-    icon: <HiHand className="h-6 w-6" />,
+    path: 'invertir',
+    icon: <MdToken className="h-6 w-6" />,
 
     secondary: true,
   },
   {
-    name: 'Mi progreso',
+    name: 'Historial',
     layout: '/admin',
     icon: <MdBarChart className="h-6 w-6" />,
-    path: 'progreso',
+    path: 'historial',
   },
   {
     name: 'Perfil',

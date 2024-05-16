@@ -1,5 +1,5 @@
 'use client';
-import Banner from 'components/admin/sanacion/Banner';
+import Banner from 'components/admin/invertir/Banner';
 import NFtone from '/public/img/nfts/Nftone.png';
 import NFt2 from '/public/img/nfts/Nft2.png';
 import NFt4 from '/public/img/nfts/Nft4.png';
@@ -11,8 +11,8 @@ import avatar2 from '/public/img/avatars/avatar2.png';
 import avatar3 from '/public/img/avatars/avatar3.png';
 
 import tableDataTopCreators from 'variables/nfts/marketplace/tableDataTopCreators';
-import HistoryItem from 'components/admin/sanacion/HistoryItem';
-import TopCreatorTable from 'components/admin/sanacion/TableTopCreators';
+import HistoryItem from 'components/admin/invertir/HistoryItem';
+import TopCreatorTable from 'components/admin/invertir/TableTopCreators';
 import NftCard from 'components/card/NftCard';
 
 const Marketplace = () => {
@@ -25,7 +25,7 @@ const Marketplace = () => {
         {/* NFt Header */}
         <div className="mb-4 mt-5 flex flex-col justify-between px-4 md:flex-row md:items-center">
           <h4 className="ml-1 text-2xl font-bold text-navy-700 dark:text-white">
-          Activos NFTs
+          Productos
           </h4>
           <ul className="mt-4 flex items-center justify-between md:mt-0 md:justify-center md:!gap-5 2xl:!gap-12">
           <li>
@@ -41,7 +41,7 @@ const Marketplace = () => {
                 className="text-base font-medium text-brand-500 hover:text-brand-500 dark:text-white"
                 href=" "
               >
-                Certificados
+                Staking
               </a>
             </li>
             <li>
@@ -49,7 +49,7 @@ const Marketplace = () => {
                 className="text-base font-medium text-brand-500 hover:text-brand-500 dark:text-white"
                 href=" "
               >
-                Servicios
+                Inversión
               </a>
             </li>
             </ul>
@@ -81,51 +81,13 @@ const Marketplace = () => {
         </div>
 
         {/* Recenlty Added setion */}
-        <div className="mb-5 mt-5 flex items-center justify-between px-[26px]">
-          <h4 className="text-2xl font-bold text-navy-700 dark:text-white">
-            Desafíos
-          </h4>
-        </div>
 
         {/* Recently Add NFTs */}
-        <div className="grid grid-cols-1 gap-5 md:grid-cols-3">
-          <NftCard
-            bidders={[avatar1, avatar2, avatar3]}
-            title="Sesión individual"
-            author="Método ONE"
-            price="10"
-            image={NFt4}
-          />
-          <NftCard
-            bidders={[avatar1, avatar2, avatar3]}
-            title="Testimonio"
-            author="Método ONE"
-            price="10"
-            image={NFt5}
-          />
-          <NftCard
-            bidders={[avatar1, avatar2, avatar3]}
-            title="Tratamiento"
-            author="Método ONE"
-            price="30"
-            image={NFt6}
-          />
-          <NftCard
-            bidders={[avatar1, avatar2, avatar3]}
-            title="Regula tu sueño"
-            author="Método ONE"
-            price="50"
-            image={NFt6}
-          />
-        </div>
+
       </div>
 
       {/* right side section */}
 
-      <div className="col-span-1 h-full w-full rounded-xl 2xl:col-span-1">
-        <TopCreatorTable tableData={tableDataTopCreators} />
-        <div className="mb-5" />
-      </div>
     </div>
   );
 };

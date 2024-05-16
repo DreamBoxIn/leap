@@ -1,4 +1,4 @@
-import avatar from '/public/img/avatars/avatar11.png';
+import avatar from '/public/img/avatars/logoelo.png';
 import banner from '/public/img/profile/banner.png';
 import Card from 'components/card';
 import Image from 'next/image';
@@ -25,30 +25,30 @@ const Banner = () => {
       {/* Name and position */}
       <div className="mt-16 flex flex-col items-center">
         <h4 className="text-xl font-bold text-navy-700 dark:text-white">
-          Adela Parkson
+          Elo Cadenas
         </h4>
-        <h5 className="text-base font-normal text-gray-600">Product Manager</h5>
+        <h5 className="text-base font-normal text-gray-600">CEO PXO y Monetae</h5>
       </div>
 
       {/* Post followers */}
       <div className="mb-3 mt-6 flex gap-4 md:!gap-14">
         <div className="flex flex-col items-center justify-center">
           <h4 className="text-2xl font-bold text-navy-700 dark:text-white">
-            17
+            +100
           </h4>
-          <p className="text-sm font-normal text-gray-600">Posts</p>
+          <p className="text-sm font-normal text-gray-600">Eventos</p>
         </div>
         <div className="flex flex-col items-center justify-center">
           <h4 className="text-2xl font-bold text-navy-700 dark:text-white">
-            9.7K
+            100K
           </h4>
-          <p className="text-sm font-normal text-gray-600">Followers</p>
+          <p className="text-sm font-normal text-gray-600">Seguidores</p>
         </div>
         <div className="flex flex-col items-center justify-center">
           <h4 className="text-2xl font-bold text-navy-700 dark:text-white">
             434
           </h4>
-          <p className="text-sm font-normal text-gray-600">Following</p>
+          <p className="text-sm font-normal text-gray-600">Post</p>
         </div>
       </div>
     </Card>

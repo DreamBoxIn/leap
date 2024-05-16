@@ -3,7 +3,7 @@ import Banner from 'components/admin/perfil/Banner';
 import General from 'components/admin/perfil/General';
 import Notification from 'components/admin/perfil/Notification';
 import Project from 'components/admin/perfil/Project';
-import Storage from 'components/admin/perfil/Storage';
+import Storage from 'components/admin/perfil/Nivel';
 import Upload from 'components/admin/perfil/Upload';
 
 const ProfileOverview = () => {
@@ -25,9 +25,6 @@ const ProfileOverview = () => {
       {/* all project & ... */}
 
       <div className="mb-4 grid h-full grid-cols-1 gap-5 lg:!grid-cols-12">
-        <div className="col-span-5 lg:col-span-6 lg:mb-0 3xl:col-span-4">
-          <Project />
-        </div>
         <div className="col-span-5 lg:col-span-6 lg:mb-0 3xl:col-span-5">
           <General />
         </div>

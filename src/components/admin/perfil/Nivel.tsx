@@ -13,10 +13,10 @@ const Storage = () => {
           <BsCloudCheck />
         </div>
         <p className="mb-px mt-3 text-2xl font-bold text-navy-700 dark:text-white">
-          Your storage
+          Tu Nivel
         </p>
         <p className="px-5 text-center text-base font-normal text-gray-600 md:!px-0 xl:!px-8">
-          Supervise your drive space in the easiest way
+          Según el riesgo y verificación KYC
         </p>
       </div>
 
@@ -24,8 +24,8 @@ const Storage = () => {
 
       <div className="flex flex-col">
         <div className="flex justify-between">
-          <p className="text-sm font-medium text-gray-600">25.6 GB</p>
-          <p className="text-sm font-medium text-gray-600">50 GB</p>
+          <p className="text-sm font-medium text-gray-600">Nivel 1</p>
+          <p className="text-sm font-medium text-gray-600">Nivel 2</p>
         </div>
         <div className="mt-2 flex h-3 w-full items-center rounded-full bg-lightPrimary dark:!bg-navy-700">
           <span className="h-full w-1/2 rounded-full bg-brand-500 dark:!bg-white" />
